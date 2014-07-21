@@ -23,7 +23,8 @@ http://developer.android.com/sdk/index.html
 
 http://developer.android.com/sdk/installing/installing-adt.html
 
-4) Na opcao File -> Import, selecionar Android e entao Existing Android Project Into Workspace.
+4) Na opcao <b>File -> Import</b>, selecionar <b>Android</> entao <b>Existing Android Project Into Workspace</b>.
+  * Importe os 3 projetos: Timmy, appcompat\_v7 e OpenCv.
 
 5) Com o emulador android rodando, instalar o OpenCV manager:
 <pre>
