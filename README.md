@@ -24,6 +24,8 @@ http://developer.android.com/sdk/installing/installing-adt.html
 4) Na opcao File -> Import, selecionar Android e entao Existing Android Project Into Workspace.
 
 5) Com o emulador android rodando, instalar o OpenCV manager:
+<br>
 	$> cd Timmy/
+<br>
 	$> adb install OpenCV-2.4.9-android-sdk/apk/OpenCV_2.4.9_Manager_2.18_armeabi.apk
 
