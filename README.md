@@ -11,7 +11,9 @@ Instrucoes para desenvolvedores
 
 0) Clone o repositorio:
 
+<pre>
 git clone https://github.com/ademirao/Timmy.git
+</pre>
 
 1) Instale o eclipse
 https://www.eclipse.org/downloads/
@@ -24,8 +26,8 @@ http://developer.android.com/sdk/installing/installing-adt.html
 4) Na opcao File -> Import, selecionar Android e entao Existing Android Project Into Workspace.
 
 5) Com o emulador android rodando, instalar o OpenCV manager:
-<br>
+<pre>
 	$> cd Timmy/
-<br>
 	$> adb install OpenCV-2.4.9-android-sdk/apk/OpenCV_2.4.9_Manager_2.18_armeabi.apk
+</pre>
 
