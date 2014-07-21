@@ -475,14 +475,6 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int logo=0x7f01002d;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int metaButtonBarButtonStyle=0x7f010071;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int metaButtonBarStyle=0x7f010070;
         /**  The type of navigation to use. 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -892,11 +884,10 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070004;
+        public static final int abc_search_url_text_holo=0x7f070003;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
-        public static final int black_overlay=0x7f070003;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -982,6 +973,15 @@ containing a value of this type.
  Minimum width of the search view text entry area. 
          */
         public static final int abc_search_view_text_min_width=0x7f08000c;
+        /**  Default screen margins, per the Android Design guidelines. 
+
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    
+         */
+        public static final int activity_horizontal_margin=0x7f080015;
+        public static final int activity_vertical_margin=0x7f080016;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -1106,7 +1106,6 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020057;
     }
     public static final class id {
-        public static final int HelloOpenCvView=0x7f05003f;
         public static final int action_bar=0x7f05001f;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001e;
@@ -1118,11 +1117,13 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050027;
+        public static final int action_settings=0x7f050040;
         public static final int activity_chooser_view_content=0x7f050028;
         public static final int always=0x7f05000b;
         public static final int any=0x7f05001a;
         public static final int back=0x7f05001b;
         public static final int beginning=0x7f050011;
+        public static final int cameraView=0x7f05003f;
         public static final int checkbox=0x7f050030;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f05002b;
@@ -1221,8 +1222,11 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
-        public static final int activity_timmy=0x7f030018;
+        public static final int activity_main=0x7f030018;
         public static final int support_simple_spinner_dropdown_item=0x7f030019;
+    }
+    public static final class menu {
+        public static final int main=0x7f0c0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1265,9 +1269,9 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
+        public static final int action_settings=0x7f0a000f;
         public static final int app_name=0x7f0a000d;
-        public static final int dummy_button=0x7f0a000e;
-        public static final int dummy_content=0x7f0a000f;
+        public static final int hello_world=0x7f0a000e;
     }
     public static final class style {
         /** 
@@ -1296,10 +1300,6 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
-        public static final int ButtonBar=0x7f0b008e;
-        public static final int ButtonBarButton=0x7f0b008f;
-        public static final int FullscreenActionBarStyle=0x7f0b0090;
-        public static final int FullscreenTheme=0x7f0b008d;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;
@@ -2191,46 +2191,6 @@ containing a value of this type.
           @attr name org.timmy:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
-        /** 
-         Declare custom theme attributes that allow changing which styles are
-         used for button bars depending on the API level.
-         ?android:attr/buttonBarStyle is new as of API 11 so this is
-         necessary to support previous API levels.
-    
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ButtonBarContainerTheme_metaButtonBarButtonStyle org.timmy:metaButtonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ButtonBarContainerTheme_metaButtonBarStyle org.timmy:metaButtonBarStyle}</code></td><td></td></tr>
-           </table>
-           @see #ButtonBarContainerTheme_metaButtonBarButtonStyle
-           @see #ButtonBarContainerTheme_metaButtonBarStyle
-         */
-        public static final int[] ButtonBarContainerTheme = {
-            0x7f010070, 0x7f010071
-        };
-        /**
-          <p>This symbol is the offset where the {@link org.timmy.R.attr#metaButtonBarButtonStyle}
-          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name org.timmy:metaButtonBarButtonStyle
-        */
-        public static final int ButtonBarContainerTheme_metaButtonBarButtonStyle = 1;
-        /**
-          <p>This symbol is the offset where the {@link org.timmy.R.attr#metaButtonBarStyle}
-          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name org.timmy:metaButtonBarStyle
-        */
-        public static final int ButtonBarContainerTheme_metaButtonBarStyle = 0;
         /** Attributes that can be used with a CameraBridgeViewBase.
            <p>Includes the following attributes:</p>
            <table>
